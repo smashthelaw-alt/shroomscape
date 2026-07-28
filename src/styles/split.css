@@ -1,0 +1,22 @@
+/* Text-split primitives. The outer span clips; the inner one moves. */
+
+.is-split { display: block; }
+
+.sp-w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  /* a hair of room so descenders and Bangla matras are never clipped */
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+
+.sp-i,
+.sp-c {
+  display: inline-block;
+  will-change: transform;
+}
+
+.sp-wordgroup { display: inline-block; white-space: nowrap; }
+
+.sp-em { color: var(--shroom-lime); }
